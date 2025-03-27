@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Predicción de Diabetes</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -80,8 +80,14 @@
         <h3>Resultado: <span id="result"></span></h3>
     </div>
     
-
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
     
+        createChat({
+            webhookUrl: 'https://9e01-181-32-105-128.ngrok-free.app/webhook/fdf7e989-b0d0-4825-819f-9beb0181956a/chat'
+        });
+    </script>
+
     <script>
         document.getElementById("predictionForm").addEventListener("submit", async function(event) {
             event.preventDefault();
